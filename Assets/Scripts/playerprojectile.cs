@@ -26,11 +26,12 @@ public class playerprojectile : MonoBehaviour
     //Play Hit animation and despawn at hit
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag != "Player")
+        if (col.gameObject.tag != "Player"  && col.gameObject.tag != "EnemyProjectile")
         {
             //PLAY EXPLOSION
             //Uncomment below line if you want the projectile to be less powerful
-            //speed = 0;
+            //this.gameObject.tag = "Untagged";
+            speed = 0;
             anim.SetTrigger("Hit");
         }
     }
