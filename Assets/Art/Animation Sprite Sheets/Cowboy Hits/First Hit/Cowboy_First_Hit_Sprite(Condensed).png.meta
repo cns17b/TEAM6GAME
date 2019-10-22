@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 91e937ed58e293944b8ada6105bd4e37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4211162374183580873
+    second: Cowboy_First_Hit_Sprite(Condensed)_0
+  - first:
+      213: 6011735863651945786
+    second: Cowboy_First_Hit_Sprite(Condensed)_1
+  - first:
+      213: 8860290629816940503
+    second: Cowboy_First_Hit_Sprite(Condensed)_2
+  - first:
+      213: -3521582566906147114
+    second: Cowboy_First_Hit_Sprite(Condensed)_3
+  - first:
+      213: 7493308067330481105
+    second: Cowboy_First_Hit_Sprite(Condensed)_4
+  - first:
+      213: 8451489108882681466
+    second: Cowboy_First_Hit_Sprite(Condensed)_5
+  - first:
+      213: 1553842421409438371
+    second: Cowboy_First_Hit_Sprite(Condensed)_6
+  - first:
+      213: -3635367454990156432
+    second: Cowboy_First_Hit_Sprite(Condensed)_7
+  - first:
+      213: -6068212515632309827
+    second: Cowboy_First_Hit_Sprite(Condensed)_8
+  - first:
+      213: 4961617558901369385
+    second: Cowboy_First_Hit_Sprite(Condensed)_9
+  - first:
+      213: 3082248127216695566
+    second: Cowboy_First_Hit_Sprite(Condensed)_10
+  - first:
+      213: -6014985814781817851
+    second: Cowboy_First_Hit_Sprite(Condensed)_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 2983
+        width: 680
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbe96cba1f28084791e50e8ea38fd32
+      internalID: -4211162374183580873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_1
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 2970
+        width: 681
+        height: 877
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3cc65f77b1c7c45b43c921350a6fc1
+      internalID: 6011735863651945786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_2
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 3034
+        width: 680
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee7ff6bf7f706d4c891ea6b6ce07d51
+      internalID: 8860290629816940503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_3
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1991
+        width: 680
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1fa5b7089959d49a94d49140c6af64
+      internalID: -3521582566906147114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_4
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1921
+        width: 195
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57ab989d781c0745bcde54c923fe3f9
+      internalID: 7493308067330481105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_5
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 1987
+        width: 680
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a7ba8401fb3734989807ecd262770d
+      internalID: 8451489108882681466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_6
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1065
+        width: 680
+        height: 834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40317cc65ad82c24596850abfa5b0883
+      internalID: 1553842421409438371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1044
+        width: 170
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13186d4a462bb774ba9565eb0a7916c7
+      internalID: -3635367454990156432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_8
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 1097
+        width: 680
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4c95aa06b49b849895a427415a7e91
+      internalID: -6068212515632309827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_9
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 378
+        width: 152
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a951ffdd9c6674fbfb29fdb489289a
+      internalID: 4961617558901369385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_10
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 177
+        width: 629
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd8d64190053d446b20e48f7080ec88
+      internalID: 3082248127216695566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy_First_Hit_Sprite(Condensed)_11
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 187
+        width: 680
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229a3eb178d527149bf5d4d8ee9200a6
+      internalID: -6014985814781817851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9ddb9c1a197fc1a419549371d72950f0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
