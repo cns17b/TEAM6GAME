@@ -3,7 +3,13 @@ guid: 4837583deb6711e42b00a338192b13f0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlayerProjectile: {fileID: 8687295129346165509, guid: 751ca8d72e9414d4eaf5201f729c86ee,
+      type: 3}
+  - anim: {instanceID: 0}
+  - health1: {instanceID: 0}
+  - health2: {instanceID: 0}
+  - health3: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

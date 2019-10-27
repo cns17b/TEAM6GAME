@@ -7,6 +7,10 @@ public class meteormove : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed;
+    public float powerup;
+    public GameObject shield;
+    public GameObject health;
+    public GameObject ammo;
     public Animator anim;
     
 
@@ -43,6 +47,7 @@ public class meteormove : MonoBehaviour
         if (col.gameObject.tag == "PlayerProjectile")
         {
             speed = 0;
+            DropPowerup();
             anim.SetBool("ifCrash", true);
         }
     }
@@ -52,4 +57,23 @@ public class meteormove : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    void DropPowerup()
+    {
+        powerup = Random.Range(1, 20);
+        //Spawn health 5% of the time
+        if (powerup == 1)
+        {
+            Instantiate(health, transform.position, transform.rotation);
+        }
+        //Spawn shield 10% of the time
+        else if (powerup == 2 ^ powerup == 3)
+        {
+            Instantiate(shield, transform.position, transform.rotation);
+        }
+        //Spawn ammo 15% of the time
+        else if (powerup == 4 ^ powerup == 5 ^ powerup == 6)
+        {
+            Instantiate(ammo, transform.position, transform.rotation);
+        }
+    }
 }

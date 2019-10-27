@@ -3,7 +3,14 @@ guid: 0851457ddfb4d7f4d9985969bccf51dc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - meteorOne: {fileID: 1762751335453442950, guid: 0cf34072772473e4bad4178d10a0a9a7,
+      type: 3}
+  - meteorTwo: {fileID: 7194912402887867789, guid: 6686b2f9fc730d248ac37840c783bb07,
+      type: 3}
+  - meteorThree: {fileID: 2856976602366506662, guid: 546e3384496c5354d80387f0a95ea569,
+      type: 3}
+  - enemy: {fileID: 1081462845540905240, guid: 836c23ae24c7c4148af7a6205b294ba2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

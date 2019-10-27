@@ -226,10 +226,15 @@ MonoBehaviour:
   speed: 0
   invincibletimer: 0
   hit: 0
+  shots: 0
+  ammotimer: 0
+  shieldanim: {fileID: 4368756000051415975}
   anim: {fileID: 1509281001}
   health1: {fileID: 0}
   health2: {fileID: 0}
   health3: {fileID: 0}
+  ammoPickup: {fileID: 7141052326004965316, guid: 554353bb3c2f8df4c9b9456e1832f518,
+    type: 3}
 --- !u!61 &2502295743723903758
 BoxCollider2D:
   m_ObjectHideFlags: 0
