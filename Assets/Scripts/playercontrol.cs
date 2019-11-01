@@ -6,13 +6,18 @@ using UnityEngine.UI;
 public class playercontrol : MonoBehaviour
 {
     public GameObject PlayerProjectile;
+    public GameObject PlayerLaser;
+    public GameObject PlayerMortar;
     public float speed;
     public float invincibletimer;
     public int hit;
-    public float shots; //ammo counter
+    public float shots1; //ammo counter for pistol
+    public float shots2; //ammo counter for mortar
+    public float shots3; //ammo counter for lazor
     public Text ammoText;
     public float ammotimer; //Timer to spawn an ammo pickup if player is out of ammo
     private bool hasShield;
+    public float currentweapon;
     Rigidbody2D rb;
     AudioSource audioData;
     public Animator shieldanim; //shield animator
@@ -22,15 +27,19 @@ public class playercontrol : MonoBehaviour
     public GameObject health3;
     public GameObject ammoPickup;
 
+
     // Start is called before the first frame update
     void Start()
     {
         hit = 0;
-        shots = 6;
+        shots1 = 6;
+        shots2 = 3;
+        shots3 = 1;
         rb = GetComponent<Rigidbody2D>();
         audioData = GetComponent<AudioSource>();
         speed = 30f;
         invincibletimer = 0;
+        currentweapon = 1;
         ammotimer = 3;
         hasShield = false;
 
@@ -45,7 +54,7 @@ public class playercontrol : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ammoText.text = "Ammo: " + shots.ToString();
+        
         //Play Idle animation, and moving animation if moving
         invincibletimer = invincibletimer - Time.deltaTime;
 
@@ -79,16 +88,47 @@ public class playercontrol : MonoBehaviour
             {
                 endgame();
             }
-        } 
+        }
+        //Swap weapons with Q and E
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            currentweapon = currentweapon - 1;
+            if (currentweapon < 1)
+            {
+                currentweapon = 3;
+            }
 
-        //Fire Projectile is Space is pressed and there is ammo
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            currentweapon = currentweapon + 1;
+            if (currentweapon > 3)
+            {
+                currentweapon = 1;
+            }
+        }
+
+        //Display Ammo for current weapon
+        if(currentweapon == 1)
+        {
+            ammoText.text = "Pistol: " + shots1.ToString();
+        }
+        else if(currentweapon == 2)
+        {
+            ammoText.text = "Mortar: " + shots2.ToString();
+        }
+        else if (currentweapon == 3)
+        {
+            ammoText.text = "Laser: " + shots3.ToString();
+        }
+        //Fire Projectile for weapon if Space is pressed and there is ammo
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("shoot");
-            shoot();
+            shoot(currentweapon);
         }
         //Spawn ammo if the player runs out
-        if (shots <= 1)
+        if (shots1 < 1)
         {
             ammotimer = ammotimer - Time.deltaTime;
             if (ammotimer < 0.1)
@@ -168,17 +208,38 @@ public class playercontrol : MonoBehaviour
         //Reset to max ammo if you pick up ammo
         if (col.gameObject.tag == "Ammo")
         {
-            shots = 6;
+            shots1 = 6;
+            shots2 = 3;
+            shots3 = 1;
             ammotimer = 3;
         }
 
     }
-    void shoot()
+    void shoot(float currentweapon)
     {
-        if (shots > 0)
-        { 
-            Instantiate(PlayerProjectile, transform.position, transform.rotation);
-            shots = shots - 1;         
+        if (currentweapon == 1)
+        {
+            if (shots1 > 0)
+            {
+                Instantiate(PlayerProjectile, transform.position, transform.rotation);
+                shots1 = shots1 - 1;
+            }
+        }
+        else if (currentweapon == 2)
+        {
+            if (shots2 > 0)
+            {
+                Instantiate(PlayerMortar, transform.position, transform.rotation);
+                shots2 = shots2 - 1;
+            }
+        }
+        else if (currentweapon == 3)
+        {
+            if (shots3 > 0)
+            {
+                Instantiate(PlayerLaser, transform.position, transform.rotation);
+                shots3 = shots3 - 1;
+            }
         }
     }
     void endgame()
