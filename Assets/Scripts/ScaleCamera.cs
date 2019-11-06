@@ -13,8 +13,8 @@ public class ScaleCamera : MonoBehaviour
     void Start()
     {
         cameraPosition = Camera.main.transform.position;
-        defaultHeight = Camera.main.orthographicSize;
-        defaultWidth = Camera.main.orthographicSize*Camera.main.aspect;
+        defaultHeight = 16.5f;
+        defaultWidth = 16.5f*Camera.main.aspect;
     }
 
     // Update is called once per frame
