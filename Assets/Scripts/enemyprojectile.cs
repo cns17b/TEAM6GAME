@@ -6,20 +6,31 @@ public class enemyprojectile : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed;
+    public Vector3 target;
+    private bool movetowards;
     Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        speed = 1200f;
+        speed = 20f;
         rb = GetComponent<Rigidbody2D>();
+        movetowards = true;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.velocity = new Vector2(-speed * Time.deltaTime, rb.velocity.y);
+        if (movetowards == true)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform.position;
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-speed*Time.deltaTime, rb.velocity.y);
+        }
     }
 
     //Play Hit animation and despawn at hit
@@ -35,6 +46,11 @@ public class enemyprojectile : MonoBehaviour
         if (col.gameObject.tag == "Despawn")
         {
             end();
+        }
+        if (col.gameObject.tag == "StopMove")
+        {
+            speed = 1200;
+            movetowards = false;
         }
     }
     void end()

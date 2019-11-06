@@ -52,7 +52,7 @@ MonoBehaviour:
     type: 3}
   meteorThree: {fileID: 6015040042589466604, guid: 74776504435e4c84e9a5efecaf332edc,
     type: 3}
-  enemy: {fileID: 1081462845540905240, guid: 836c23ae24c7c4148af7a6205b294ba2, type: 3}
+  enemy: {fileID: 1088389718566071198, guid: 836c23ae24c7c4148af7a6205b294ba2, type: 3}
   spawnWhich: 0
   spawnNum: 0
   spawnDelayM: 0

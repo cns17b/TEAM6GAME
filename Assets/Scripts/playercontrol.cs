@@ -17,6 +17,8 @@ public class playercontrol : MonoBehaviour
     public Text ammoText;
     public float ammotimer; //Timer to spawn an ammo pickup if player is out of ammo
     private bool hasShield;
+    private bool isHurt;
+    public float emitRateFire;
     public float currentweapon;
     Rigidbody2D rb;
     AudioSource audioData;
@@ -26,11 +28,15 @@ public class playercontrol : MonoBehaviour
     public GameObject health2;
     public GameObject health3;
     public GameObject ammoPickup;
+    public ParticleSystem Fire;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        emitRateFire = 1f;
+      
+        isHurt = false;
         hit = 0;
         shots1 = 6;
         shots2 = 3;
@@ -89,6 +95,7 @@ public class playercontrol : MonoBehaviour
                 endgame();
             }
         }
+        
         //Swap weapons with Q and E
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -189,15 +196,19 @@ public class playercontrol : MonoBehaviour
         {
             health1.SetActive(false);
             health2.SetActive(true);
+            emitRateFire = 1f;
+
         }
         if (hit == 2)
         {
             health2.SetActive(false);
             health3.SetActive(true);
+            emitRateFire = 5f;
         }
         if (hit == 3)
         {
             health3.SetActive(false);
+            emitRateFire = 10f;
         }
         //Give shield if pick up a shield
         if (col.gameObject.tag == "Shield")
@@ -250,4 +261,21 @@ public class playercontrol : MonoBehaviour
        
 
     }
+
+    IEnumerator catchFire(bool isHurt)
+    {
+        var FireEm = Fire.emission;
+        var FireMain = Fire.main;
+        while (isHurt == true)
+        {
+            var nbEmissionsFire = Random.Range(1, 5); 
+            FireEm.enabled = true;
+            Fire.Emit(nbEmissionsFire);
+            FireEm.enabled = false;
+
+            yield return new WaitForSeconds(1f / emitRateFire);
+        }
+
+    }
+
 }
