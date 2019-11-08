@@ -125,18 +125,18 @@ TextureImporter:
       name: spritesheetblackholefixed_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 188
+        x: 80
+        y: 158
         width: 844
         height: 829
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc858bff26c8fb345b3c0bd45b9a934d
+      spriteID: 7e3cdb2803ae3c24e9e5bdda058271c2
       internalID: -5454062000280037898
       vertices: []
       indices: 
@@ -146,18 +146,18 @@ TextureImporter:
       name: spritesheetblackholefixed_1
       rect:
         serializedVersion: 2
-        x: 1133
+        x: 1120
         y: 157
         width: 777
         height: 829
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a02ec72213eb2b346ba9ac29bdfb4c3a
+      spriteID: e85cfcf8b6a6a744faa3e8c85ed87b69
       internalID: -5075822818298176226
       vertices: []
       indices: 
@@ -167,18 +167,18 @@ TextureImporter:
       name: spritesheetblackholefixed_2
       rect:
         serializedVersion: 2
-        x: 2109
-        y: 147
+        x: 2080
+        y: 148
         width: 828
         height: 841
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51, y: 0.51}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fc787ec1ed6d0547a79aeee9b73031b
+      spriteID: 06e891c936247b949a6574a3df993b64
       internalID: 1615966112848422854
       vertices: []
       indices: 
@@ -188,18 +188,18 @@ TextureImporter:
       name: spritesheetblackholefixed_3
       rect:
         serializedVersion: 2
-        x: 3078
+        x: 3080
         y: 168
         width: 828
         height: 779
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4161dfa214819e0499d9be53989c2871
+      spriteID: c49dc2bec78d0274688688aaf11c91ae
       internalID: -69364965386892218
       vertices: []
       indices: 
@@ -209,18 +209,18 @@ TextureImporter:
       name: spritesheetblackholefixed_4
       rect:
         serializedVersion: 2
-        x: 4074
-        y: 145
+        x: 4080
+        y: 158
         width: 840
         height: 826
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c0e50034ba0113449a930ff29c4cf0b
+      spriteID: 311be3bfcef608b45aaa4df4efed561c
       internalID: -4479214165957961497
       vertices: []
       indices: 
@@ -230,18 +230,18 @@ TextureImporter:
       name: spritesheetblackholefixed_5
       rect:
         serializedVersion: 2
-        x: 5090
-        y: 172
-        width: 777
-        height: 830
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5080
+        y: 154
+        width: 840
+        height: 826
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e30592837ce090b4787699c4d2c51964
+      spriteID: 94f7dae32f88cc546add72e20e8af6fb
       internalID: -5949730393330838833
       vertices: []
       indices: 
@@ -251,18 +251,18 @@ TextureImporter:
       name: spritesheetblackholefixed_6
       rect:
         serializedVersion: 2
-        x: 6063
-        y: 168
+        x: 6070
+        y: 174
         width: 828
         height: 841
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.52, y: 0.48}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7f88076f8c28942836a1ca9ba8a044
+      spriteID: 6891bc6d231d11441ac9d126134e03e5
       internalID: -8376672282098142871
       vertices: []
       indices: 
@@ -272,18 +272,18 @@ TextureImporter:
       name: spritesheetblackholefixed_7
       rect:
         serializedVersion: 2
-        x: 7094
+        x: 7080
         y: 211
         width: 832
         height: 779
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51, y: 0.469693}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d8ab96c469f3c40aeafb3dc9fd5f57
+      spriteID: 0093bba53056a034e971b77184a20039
       internalID: 1145064740901876450
       vertices: []
       indices: 
