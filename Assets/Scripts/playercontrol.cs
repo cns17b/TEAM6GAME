@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class playercontrol : MonoBehaviour
 {
-    public GameObject PlayerProjectile;
-    public GameObject PlayerLaser;
-    public GameObject PlayerMortar;
+    
     public float speed;
     public float invincibletimer;
     public int hit;
@@ -18,24 +16,33 @@ public class playercontrol : MonoBehaviour
     public float ammotimer; //Timer to spawn an ammo pickup if player is out of ammo
     private bool hasShield;
     private bool isHurt;
-    public float emitRateFire;
     public float currentweapon;
+
     Rigidbody2D rb;
-    AudioSource audioData;
+    public AudioSource audioData;
+    public AudioSource firesound;
+    public AudioSource lasersound;
+    public AudioSource mortarsound;
+    public GameObject PlayerProjectile;
+    public GameObject PlayerLaser;
+    public GameObject PlayerMortar;
     public Animator shieldanim; //shield animator
     public Animator anim; //Player animator
     public GameObject health1;
     public GameObject health2;
     public GameObject health3;
     public GameObject ammoPickup;
-    public ParticleSystem Fire;
+    public ParticleSystem FireSmall;
+    public ParticleSystem FireLarge;
+    public ParticleSystem FireDead;
+    public ParticleSystem laser;
+    public ParticleSystem mortar;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        emitRateFire = 1f;
-      
+       
         isHurt = false;
         hit = 0;
         shots1 = 6;
@@ -82,6 +89,10 @@ public class playercontrol : MonoBehaviour
         {
             anim.SetBool("isMoving", false);
 
+        }
+        if (isHurt == true)
+        {
+            catchFire(hit);
         }
 
         //End game when health is 0
@@ -155,6 +166,7 @@ public class playercontrol : MonoBehaviour
             if(hasShield == true)
             {
                 hasShield = false;
+                invincibletimer = 3;
                 shieldanim.SetBool("HasShield", false);
             }
             //Play hit sound and hit animation
@@ -183,7 +195,7 @@ public class playercontrol : MonoBehaviour
         //Give health if you get a health pickup and are not at full health
         if (col.gameObject.tag == "Health")
         {
-            if (hit > 0)
+            if (hit > 0 && hit < 3)
             {
                 hit = hit - 1;
             }
@@ -191,24 +203,32 @@ public class playercontrol : MonoBehaviour
         if (hit == 0)
         {
             health1.SetActive(true);
+            firesound.Stop();
+            isHurt = false;
+            FireSmall.gameObject.SetActive(false);
         }
         if (hit == 1)
         {
             health1.SetActive(false);
             health2.SetActive(true);
-            emitRateFire = 1f;
-
+            firesound.Play(0);
+            firesound.volume = 0.2f;
+            FireSmall.gameObject.SetActive(true);
+            FireLarge.gameObject.SetActive(false);
+            isHurt = true;
         }
         if (hit == 2)
         {
             health2.SetActive(false);
             health3.SetActive(true);
-            emitRateFire = 5f;
+            firesound.volume = 0.5f;
+            FireLarge.gameObject.SetActive(true);
         }
         if (hit == 3)
         {
             health3.SetActive(false);
-            emitRateFire = 10f;
+            firesound.volume = 1f;
+            FireDead.gameObject.SetActive(true);
         }
         //Give shield if pick up a shield
         if (col.gameObject.tag == "Shield")
@@ -248,7 +268,7 @@ public class playercontrol : MonoBehaviour
         {
             if (shots3 > 0)
             {
-                Instantiate(PlayerLaser, transform.position, transform.rotation);
+                laser.Play();
                 shots3 = shots3 - 1;
             }
         }
@@ -261,19 +281,26 @@ public class playercontrol : MonoBehaviour
        
 
     }
-
-    IEnumerator catchFire(bool isHurt)
-    {
-        var FireEm = Fire.emission;
-        var FireMain = Fire.main;
-        while (isHurt == true)
+    
+    IEnumerator catchFire(int hit)
+   {
+       
+    
+        while (hit > 0)
         {
-            var nbEmissionsFire = Random.Range(1, 5); 
-            FireEm.enabled = true;
-            Fire.Emit(nbEmissionsFire);
-            FireEm.enabled = false;
+            var SmEm = FireSmall.emission;
+            SmEm.enabled = true;
+            FireSmall.Play();
 
-            yield return new WaitForSeconds(1f / emitRateFire);
+            while (hit > 1)
+            {
+                FireLarge.Play();
+                while (hit > 2)
+                {
+                    FireDead.Play();
+                }
+            }
+            yield return new WaitForSeconds(0.01f);
         }
 
     }
