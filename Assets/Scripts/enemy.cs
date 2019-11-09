@@ -7,6 +7,9 @@ public class enemy : MonoBehaviour
     Rigidbody2D rb;
     public GameObject EnemyProjectile;
     public float speed;
+    private bool move;
+    private bool shoot;
+    private bool hit;
     //Time between shots
     public float shootDelay;
     public float shootTimer;
@@ -16,48 +19,67 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movetimer = 3;
+        move = true;
+        shoot = false;
+        hit = false;
+        movetimer = 2f;
         anim = GetComponent<Animator>();
         anim.SetBool("Start", true);
         shootDelay = 3;
         shootTimer = 1;
-        speed = 0f;
+        speed = -500f;
         rb = GetComponent<Rigidbody2D>();
         anim.SetTrigger("Start");
         //Play the appearing animation that moves the cow onto the screen
-        rb.velocity = new Vector2(-500 * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        movetimer = movetimer - Time.deltaTime;
-        if(movetimer <= 0)
+        if (move == false)
         {
-            rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
-            anim.SetBool("Start", false);
+            movetimer = movetimer - Time.deltaTime;
+            if (movetimer <= 0)
+            {
+                shoot = true;
+                speed = 0;
+                rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+                anim.SetBool("Start", false);
+            }
+            
+            shootTimer = shootTimer - Time.deltaTime;
         }
-        rb.transform.Rotate(0, 0, (-speed/6) * Time.deltaTime);
-        shootTimer = shootTimer - Time.deltaTime;
+        if (hit == true)
+        {
+            speed = -2400f;
+            rb.transform.Rotate(0, 0, (-speed / 6) * Time.deltaTime);
+            rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+        }
 
         //Fire Projectile when timer is zero
         if (shootTimer <= 0)
         {
-            shootTimer = shootDelay;
-            //Play shooting animation
-            Instantiate(EnemyProjectile, transform.position, transform.rotation);
-            
+            if (shoot == true)
+            {
+                shootTimer = shootDelay;
+                //Play shooting animation
+                Instantiate(EnemyProjectile, transform.position, transform.rotation);
+            }
             //anim.SetTrigger("Shoot");
         }
     }
+
+    
 
     //Destroy enemy upon being hit
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "PlayerProjectile")
         {
-            speed = -2400f;
-            shootTimer = 500;
+            move = true;
+            hit = true;
+            shoot = false;
         }
         if (col.gameObject.tag == "Despawn")
         {
@@ -66,6 +88,12 @@ public class enemy : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
+        }
+
+        //Tell enemy when to stop moving and when to start shooting
+        if (col.gameObject.tag == "StopEnemy")
+        {
+            move = false;
         }
     }
 

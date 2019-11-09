@@ -5,6 +5,7 @@ using UnityEngine;
 public class mortar : MonoBehaviour
 {
     public ParticleSystem Explosion;
+    public AudioSource explodesound;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,6 @@ public class mortar : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         Explosion.gameObject.SetActive(true);
+        explodesound.Play();
     }
 }

@@ -1318,10 +1318,11 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 1893605148}
-    - target: {fileID: 1193250078, guid: 67e1ad714bab55548881c1a64fe4f30b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -20
-      objectReference: {fileID: 0}
+    - target: {fileID: 6033282044250670818, guid: 67e1ad714bab55548881c1a64fe4f30b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a55198744c4634e4bb368a7b2a337057, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e1ad714bab55548881c1a64fe4f30b, type: 3}
 --- !u!1001 &7112678455088099674
