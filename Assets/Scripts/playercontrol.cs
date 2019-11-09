@@ -16,7 +16,7 @@ public class playercontrol : MonoBehaviour
     public float ammotimer; //Timer to spawn an ammo pickup if player is out of ammo
     private bool hasShield;
     private bool isHurt;
-    public float currentweapon;
+    public int currentweapon;
 
     Rigidbody2D rb;
     public AudioSource audioData;
@@ -24,8 +24,6 @@ public class playercontrol : MonoBehaviour
     public AudioSource lasersound;
     public AudioSource mortarsound;
     public GameObject PlayerProjectile;
-    public GameObject PlayerLaser;
-    public GameObject PlayerMortar;
     public Animator shieldanim; //shield animator
     public Animator anim; //Player animator
     public GameObject health1;
@@ -246,7 +244,7 @@ public class playercontrol : MonoBehaviour
         }
 
     }
-    void shoot(float currentweapon)
+    void shoot(int currentweapon)
     {
         if (currentweapon == 1)
         {
@@ -260,7 +258,8 @@ public class playercontrol : MonoBehaviour
         {
             if (shots2 > 0)
             {
-                Instantiate(PlayerMortar, transform.position, transform.rotation);
+                mortar.gameObject.SetActive(true);
+                mortarsound.Play();
                 shots2 = shots2 - 1;
             }
         }
@@ -268,7 +267,9 @@ public class playercontrol : MonoBehaviour
         {
             if (shots3 > 0)
             {
-                laser.Play();
+                //laser.Play();
+                laser.gameObject.SetActive(true);
+                lasersound.Play(0);
                 shots3 = shots3 - 1;
             }
         }

@@ -30,7 +30,7 @@ public class meteormove : MonoBehaviour
         rb.transform.Rotate(0, 0, 100 * Time.deltaTime);
     }
 
-    //Destroy Meteor at despawn collider
+    //Destroy Meteor if hit
     void OnTriggerEnter2D(Collider2D col)
     {
 
@@ -51,6 +51,7 @@ public class meteormove : MonoBehaviour
             anim.SetBool("ifCrash", true);
         }
     }
+
     void end()
     {
         
