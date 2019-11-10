@@ -14434,8 +14434,10 @@ MonoBehaviour:
   mortarsound: {fileID: 1978421364}
   PlayerProjectile: {fileID: 8687295129346165509, guid: 751ca8d72e9414d4eaf5201f729c86ee,
     type: 3}
-  mortarblast: {fileID: 0}
-  laserblast: {fileID: 0}
+  mortarblast: {fileID: 3083026370275946946, guid: eb826e328beafa147aa492b6d00144e9,
+    type: 3}
+  laserblast: {fileID: 7283781638656276749, guid: 58a20eebf5e463b4e9c065130e0840e3,
+    type: 3}
   shieldanim: {fileID: 4368756000051415975}
   anim: {fileID: 1509281001}
   health1: {fileID: 0}
