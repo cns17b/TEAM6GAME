@@ -42,7 +42,7 @@ public class enemy : MonoBehaviour
             movetimer = movetimer - Time.deltaTime;
             if (movetimer <= 0)
             {
-                shoot = true;
+                
                 speed = 0;
                 rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
                 anim.SetBool("Start", false);
@@ -94,6 +94,7 @@ public class enemy : MonoBehaviour
         if (col.gameObject.tag == "StopEnemy")
         {
             move = false;
+            shoot = true;
         }
     }
 

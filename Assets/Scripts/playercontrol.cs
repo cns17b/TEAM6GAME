@@ -24,6 +24,8 @@ public class playercontrol : MonoBehaviour
     public AudioSource lasersound;
     public AudioSource mortarsound;
     public GameObject PlayerProjectile;
+    public GameObject mortarblast;
+    public GameObject laserblast;
     public Animator shieldanim; //shield animator
     public Animator anim; //Player animator
     public GameObject health1;
@@ -44,8 +46,8 @@ public class playercontrol : MonoBehaviour
         isHurt = false;
         hit = 0;
         shots1 = 6;
-        shots2 = 3;
-        shots3 = 1;
+        shots2 = 300;
+        shots3 = 100;
         rb = GetComponent<Rigidbody2D>();
         audioData = GetComponent<AudioSource>();
         speed = 30f;
@@ -98,6 +100,7 @@ public class playercontrol : MonoBehaviour
         {
 
             rb.velocity = new Vector2(-5, rb.velocity.y);
+            speed = 0;
             anim.SetBool("Dead", true);
             if (invincibletimer <= 0)
             {
@@ -258,7 +261,8 @@ public class playercontrol : MonoBehaviour
         {
             if (shots2 > 0)
             {
-                mortar.gameObject.SetActive(true);
+                Instantiate(mortarblast, transform.position, transform.rotation);
+               // mortar.gameObject.SetActive(true);
                 mortarsound.Play();
                 shots2 = shots2 - 1;
             }
@@ -267,8 +271,11 @@ public class playercontrol : MonoBehaviour
         {
             if (shots3 > 0)
             {
+
+                Instantiate(laserblast, new Vector3(transform.position.x - 20, transform.position.y, transform.position.z), transform.rotation);
                 //laser.Play();
-                laser.gameObject.SetActive(true);
+                // laser.enableEmission = true;
+                // laser.Play();
                 lasersound.Play(0);
                 shots3 = shots3 - 1;
             }
