@@ -70,7 +70,8 @@ public class enemy : MonoBehaviour
         }
     }
 
-    
+
+
 
     //Destroy enemy upon being hit
     void OnTriggerEnter2D(Collider2D col)

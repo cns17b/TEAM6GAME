@@ -46,8 +46,8 @@ public class playercontrol : MonoBehaviour
         isHurt = false;
         hit = 0;
         shots1 = 6;
-        shots2 = 300;
-        shots3 = 100;
+        shots2 = 3;
+        shots3 = 1;
         rb = GetComponent<Rigidbody2D>();
         audioData = GetComponent<AudioSource>();
         speed = 30f;
@@ -111,7 +111,7 @@ public class playercontrol : MonoBehaviour
         //Swap weapons with Q and E
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            currentweapon = currentweapon - 1;
+            currentweapon = currentweapon - 2;
             if (currentweapon < 1)
             {
                 currentweapon = 3;
@@ -120,7 +120,7 @@ public class playercontrol : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            currentweapon = currentweapon + 1;
+            currentweapon = currentweapon + 2;
             if (currentweapon > 3)
             {
                 currentweapon = 1;

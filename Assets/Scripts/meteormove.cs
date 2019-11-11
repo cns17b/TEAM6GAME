@@ -12,6 +12,8 @@ public class meteormove : MonoBehaviour
     public GameObject health;
     public GameObject ammo;
     public Animator anim;
+    public GameObject explosion;
+    public AudioSource explodesound;
     
 
     // Start is called before the first frame update
@@ -48,7 +50,10 @@ public class meteormove : MonoBehaviour
         {
             speed = 0;
             DropPowerup();
-            anim.SetBool("ifCrash", true);
+            explodesound.Play(0);
+            Instantiate(explosion, transform.position, transform.rotation);
+            end();
+            //anim.SetBool("ifCrash", true);
         }
     }
 

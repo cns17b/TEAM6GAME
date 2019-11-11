@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class mortarparticle : MonoBehaviour
 {
-    public GameObject Explosion;
+    public ParticleSystem Explosion;
     public ParticleSystem mortar;
     public AudioSource explodesound;
+    CircleCollider2D circ;
     public float life;
     private int hit;
     List<ParticleCollisionEvent> collisionEvents;
     // Start is called before the first frame update
     void Start()
     {
+        circ = GetComponent<CircleCollider2D>();
         hit = 0;
         life = 50;
         collisionEvents = new List<ParticleCollisionEvent>();
+        mortar.Emit(1);
     }
 
     // Update is called once per frame
@@ -32,19 +35,12 @@ public class mortarparticle : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         ParticlePhysicsExtensions.GetCollisionEvents(mortar, other, collisionEvents);
-        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Meteor")
-        {
-            print(hit);
-            hit = hit + 1;
-            if (hit == 1)
-            {
-                Instantiate(Explosion);
-                Explosion.transform.position = collisionEvents[1].intersection;
-                life = 3;
-                this.gameObject.SetActive(false);
-                explodesound.Play();
-            }
-        }
+        Explosion.transform.position = collisionEvents[1].intersection;
+        circ.transform.position = collisionEvents[1].intersection;
+        Explosion.Emit(1);
+        life = 3f;
+        mortar.Stop();
+        explodesound.Play();
 
     }
 }
