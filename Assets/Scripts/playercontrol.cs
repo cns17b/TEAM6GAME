@@ -213,7 +213,7 @@ public class playercontrol : MonoBehaviour
             health1.SetActive(false);
             health2.SetActive(true);
             firesound.Play(0);
-            firesound.volume = 0.2f;
+            firesound.volume = 1f;
             FireSmall.gameObject.SetActive(true);
             FireLarge.gameObject.SetActive(false);
             isHurt = true;
@@ -222,7 +222,7 @@ public class playercontrol : MonoBehaviour
         {
             health2.SetActive(false);
             health3.SetActive(true);
-            firesound.volume = 0.5f;
+            firesound.volume = 1f;
             FireLarge.gameObject.SetActive(true);
         }
         if (hit == 3)
