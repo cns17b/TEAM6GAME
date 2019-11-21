@@ -272,7 +272,7 @@ public class playercontrol : MonoBehaviour
             if (shots3 > 0)
             {
 
-                Instantiate(laserblast, new Vector3(transform.position.x - 20, transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(laserblast, new Vector3(transform.position.x - 40, transform.position.y, transform.position.z), transform.rotation);
                 //laser.Play();
                 // laser.enableEmission = true;
                 // laser.Play();
