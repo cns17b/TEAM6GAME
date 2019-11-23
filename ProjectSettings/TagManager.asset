@@ -18,6 +18,8 @@ TagManager:
   - Mortar
   - PauseMenu
   - UI
+  - DefeatMenu
+  - VictoryMenu
   layers:
   - Default
   - TransparentFX

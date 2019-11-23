@@ -37,6 +37,9 @@ public class playercontrol : MonoBehaviour
     public ParticleSystem FireDead;
     public ParticleSystem laser;
     public ParticleSystem mortar;
+    public GameObject defeatMenu;
+    public GameObject victoryMenu;
+
 
 
     // Start is called before the first frame update
@@ -95,7 +98,7 @@ public class playercontrol : MonoBehaviour
             catchFire(hit);
         }
 
-        //End game when health is 0
+        //Lose game when health is 0
         if (hit == 3)
         {
 
@@ -104,7 +107,7 @@ public class playercontrol : MonoBehaviour
             anim.SetBool("Dead", true);
             if (invincibletimer <= 0)
             {
-                endgame();
+                lose();
             }
         }
         
@@ -161,6 +164,10 @@ public class playercontrol : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.gameObject.tag == "FinishLine")
+        {
+            win();
+        }
         if (invincibletimer <= 0)
         {
             //Ignore the hit and diable shield if shield is active
@@ -281,15 +288,23 @@ public class playercontrol : MonoBehaviour
             }
         }
     }
-    void endgame()
+    void lose()
     {
-      
-       Time.timeScale = 0;
-       Destroy(this.gameObject);
+        defeatMenu.SetActive(true);
+        Destroy(this.gameObject);
+        
        
 
     }
-    
+    void win()
+    {
+        victoryMenu.SetActive(true);
+        Destroy(this.gameObject);
+
+
+
+    }
+
     IEnumerator catchFire(int hit)
    {
        
