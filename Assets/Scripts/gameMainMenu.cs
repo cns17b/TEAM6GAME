@@ -15,6 +15,10 @@ public class gameMainMenu : MonoBehaviour
         Time.timeScale = 0;
         Menuobjects = GameObject.FindGameObjectsWithTag("MainMenu");
         ComingSoonobjects = GameObject.FindGameObjectsWithTag("ComingSoon");
+        foreach (GameObject j in ComingSoonobjects)
+        {
+            j.SetActive(false);
+        }
     }
 
     // Update is called once per frame
