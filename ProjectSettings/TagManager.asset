@@ -16,6 +16,8 @@ TagManager:
   - StopMove
   - StopEnemy
   - Mortar
+  - PauseMenu
+  - UI
   layers:
   - Default
   - TransparentFX
