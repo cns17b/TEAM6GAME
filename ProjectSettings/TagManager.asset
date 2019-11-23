@@ -21,6 +21,9 @@ TagManager:
   - DefeatMenu
   - VictoryMenu
   - FinishLine
+  - MainMenu
+  - ComingSoon
+  - LevelSelect
   layers:
   - Default
   - TransparentFX
