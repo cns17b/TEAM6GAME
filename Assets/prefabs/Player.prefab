@@ -14411,7 +14411,7 @@ GameObject:
   - component: {fileID: 2149462338852379667}
   - component: {fileID: 2149462338852379668}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14548,9 +14548,11 @@ MonoBehaviour:
   FireLarge: {fileID: 2149462338201328678}
   FireDead: {fileID: 2149462337996471169}
   laser: {fileID: 9039358189241311444, guid: 40c6c99542ec9b246b6e9759f3650ae8, type: 3}
-  mortar: {fileID: 5578478159401269043, guid: eb826e328beafa147aa492b6d00144e9, type: 3}
-  defeatMenu: {fileID: 0}
-  victoryMenu: {fileID: 0}
+  mortar: {fileID: 298326568843239775, guid: 3a9eacfda53632d49983b3be1519b02f, type: 3}
+  defeatMenu: {fileID: 972388713572238432, guid: 7511d7e74d6f5fd4e958e3c3c07ada22,
+    type: 3}
+  victoryMenu: {fileID: 9067724089140152090, guid: 1a6c88a3519acd7439bdda1ecee7ab25,
+    type: 3}
 --- !u!61 &4570480871914510190
 BoxCollider2D:
   m_ObjectHideFlags: 0

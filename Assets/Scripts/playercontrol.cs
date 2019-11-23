@@ -45,7 +45,9 @@ public class playercontrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        victoryMenu.SetActive(false);
+        defeatMenu.SetActive(false);
+        Time.timeScale = 1;
         isHurt = false;
         hit = 0;
         shots1 = 6;
