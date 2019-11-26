@@ -14,7 +14,7 @@ public class enemyprojectileEasy : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        speed = 20f;
+        speed = 1200f;
         rb = GetComponent<Rigidbody2D>();
         movetowards = false;
     }

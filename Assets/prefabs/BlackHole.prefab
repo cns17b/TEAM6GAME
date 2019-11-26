@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 328761778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.1666667, y: 0.5151515, z: -1}
-  m_LocalScale: {x: 30, y: 0.030303031, z: 1}
+  m_LocalScale: {x: 10000, y: 0.030303031, z: 1}
   m_Children: []
   m_Father: {fileID: 6033282044250670828}
   m_RootOrder: 2
@@ -82,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053257033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27, y: 0, z: -1}
+  m_LocalPosition: {x: 25, y: 0, z: -1}
   m_LocalScale: {x: 0.33333334, y: 3, z: 30}
   m_Children: []
   m_Father: {fileID: 6033282044250670828}
@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 1567596376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.1666667, y: -0.5151515, z: -1}
-  m_LocalScale: {x: 30, y: 0.030303031, z: 1}
+  m_LocalScale: {x: 100000, y: 0.030303031, z: 1}
   m_Children: []
   m_Father: {fileID: 6033282044250670828}
   m_RootOrder: 1
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 6908326111825009422}
   m_Layer: 2
   m_Name: DespawnCollider2
-  m_TagString: Despawn
+  m_TagString: DespawnPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

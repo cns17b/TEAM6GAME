@@ -22,16 +22,16 @@ public class enemy : MonoBehaviour
         move = true;
         shoot = false;
         hit = false;
-        movetimer = 2f;
+        movetimer = 1f;
         anim = GetComponent<Animator>();
         anim.SetBool("Start", true);
         shootDelay = 3;
         shootTimer = 1;
-        speed = -500f;
+        speed = -25f;
         rb = GetComponent<Rigidbody2D>();
         anim.SetTrigger("Start");
         //Play the appearing animation that moves the cow onto the screen
-        rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
     // Update is called once per frame

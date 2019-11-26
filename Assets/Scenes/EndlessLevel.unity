@@ -646,11 +646,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4060683123871932869, guid: 6192b600428565a46875b6910c54306c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6192b600428565a46875b6910c54306c, type: 3}
 --- !u!1001 &1692699187
@@ -921,6 +916,12 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b09d335591b3b54b933a7cc96dd366a, type: 3}
+--- !u!1 &1051800057294103033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6543423567799455834, guid: 0b09d335591b3b54b933a7cc96dd366a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1051800057294103032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2492465309492985076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1171,6 +1172,11 @@ PrefabInstance:
       propertyPath: victoryMenu
       value: 
       objectReference: {fileID: 972388713372376892}
+    - target: {fileID: 4570480871914510186, guid: 413e7de23a90eaa47a172ece7d05b38c,
+        type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1051800057294103033}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413e7de23a90eaa47a172ece7d05b38c, type: 3}
 --- !u!1001 &6033282044867277124
@@ -1244,16 +1250,21 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 6077140975873934305}
-    - target: {fileID: 6908326111825009422, guid: 67e1ad714bab55548881c1a64fe4f30b,
-        type: 3}
-      propertyPath: countText
-      value: 
-      objectReference: {fileID: 6077140975873934305}
     - target: {fileID: 6033282044250670818, guid: 67e1ad714bab55548881c1a64fe4f30b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a55198744c4634e4bb368a7b2a337057, type: 2}
+    - target: {fileID: 6908326111825009422, guid: 67e1ad714bab55548881c1a64fe4f30b,
+        type: 3}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 6077140975873934305}
+    - target: {fileID: 6908326111825009422, guid: 67e1ad714bab55548881c1a64fe4f30b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e1ad714bab55548881c1a64fe4f30b, type: 3}
 --- !u!114 &6077140975873934305 stripped

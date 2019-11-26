@@ -9,13 +9,13 @@ public class FinishLineMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = -1200f;
+        speed = -25f;
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 }

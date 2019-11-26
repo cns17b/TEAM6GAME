@@ -39,12 +39,14 @@ public class playercontrol : MonoBehaviour
     public ParticleSystem mortar;
     public GameObject defeatMenu;
     public GameObject victoryMenu;
+    public GameObject UI;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        UI.SetActive(true);
         victoryMenu.SetActive(false);
         defeatMenu.SetActive(false);
         Time.timeScale = 1;
@@ -293,7 +295,9 @@ public class playercontrol : MonoBehaviour
     void lose()
     {
         defeatMenu.SetActive(true);
-        Destroy(this.gameObject);
+        UI.SetActive(false);
+        Time.timeScale = 0;
+    
         
        
 
@@ -301,7 +305,9 @@ public class playercontrol : MonoBehaviour
     void win()
     {
         victoryMenu.SetActive(true);
-        Destroy(this.gameObject);
+        UI.SetActive(false);
+        Time.timeScale = 0;
+     
 
 
 

@@ -24,6 +24,7 @@ TagManager:
   - MainMenu
   - ComingSoon
   - LevelSelect
+  - DespawnPlayer
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,11 @@ public class gameMainMenu : MonoBehaviour
 
     GameObject[] Menuobjects;
     GameObject[] ComingSoonobjects;
+    public AudioSource menumusic;
     // Start is called before the first frame update
     void Start()
     {
+        menumusic.Play();
         Time.timeScale = 0;
         Menuobjects = GameObject.FindGameObjectsWithTag("MainMenu");
         ComingSoonobjects = GameObject.FindGameObjectsWithTag("ComingSoon");
@@ -29,6 +31,7 @@ public class gameMainMenu : MonoBehaviour
     //Load Level Select
     public void LevelSelect()
     {
+        menumusic.Stop();
         SceneManager.LoadScene("LevelSelect");
         //Application.LoadLevel(Application.loadedLevel);
     }

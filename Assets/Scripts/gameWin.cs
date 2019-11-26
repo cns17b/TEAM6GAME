@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class gameWin : MonoBehaviour
 {
     GameObject[] winobjects;
-    GameObject[] UIobjects;
+    //GameObject[] UIobjects;
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
+        
         winobjects = GameObject.FindGameObjectsWithTag("VictoryMenu");
-        UIobjects = GameObject.FindGameObjectsWithTag("UI");
+       // UIobjects = GameObject.FindGameObjectsWithTag("UI");
         Win();
     }
 
@@ -38,10 +38,10 @@ public class gameWin : MonoBehaviour
         {
             g.SetActive(true);
         }
-        foreach (GameObject j in UIobjects)
-        {
-            j.SetActive(false);
-        }
+       // foreach (GameObject j in UIobjects)
+        //{
+         //   j.SetActive(false);
+        //}
     }
 
     //loads inputted level
