@@ -11,7 +11,6 @@ public class meteormove : MonoBehaviour
     public GameObject shield;
     public GameObject health;
     public GameObject ammo;
-    public Animator anim;
     public GameObject explosion;
     public AudioSource explodesound;
     
@@ -20,7 +19,6 @@ public class meteormove : MonoBehaviour
     void Start()
     {
        
-        anim = GetComponent<Animator>();
         speed = -1200f;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -67,7 +65,7 @@ public class meteormove : MonoBehaviour
     {
         powerup = Random.Range(1, 20);
         //Spawn health 5% of the time
-        if (powerup == 1)
+        if (powerup == 1 ^ powerup == 20)
         {
             Instantiate(health, transform.position, transform.rotation);
         }

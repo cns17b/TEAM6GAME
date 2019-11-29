@@ -5,26 +5,22 @@ using UnityEngine.UI;
 
 public class playercontrol : MonoBehaviour
 {
-    
+    //Assets/Plugins/WebGL/ImageUploader.jslib
     public float speed;
     public float invincibletimer;
     public int hit;
     public float shots1; //ammo counter for pistol
-    public float shots2; //ammo counter for mortar
-    public float shots3; //ammo counter for lazor
+    public float shots2; //ammo counter for lazor
     public Text ammoText;
     public float ammotimer; //Timer to spawn an ammo pickup if player is out of ammo
     private bool hasShield;
-    private bool isHurt;
     public int currentweapon;
 
     Rigidbody2D rb;
     public AudioSource audioData;
     public AudioSource firesound;
     public AudioSource lasersound;
-    public AudioSource mortarsound;
     public GameObject PlayerProjectile;
-    public GameObject mortarblast;
     public GameObject laserblast;
     public Animator shieldanim; //shield animator
     public Animator anim; //Player animator
@@ -36,7 +32,6 @@ public class playercontrol : MonoBehaviour
     public ParticleSystem FireLarge;
     public ParticleSystem FireDead;
     public ParticleSystem laser;
-    public ParticleSystem mortar;
     public GameObject defeatMenu;
     public GameObject victoryMenu;
     public GameObject UI;
@@ -50,11 +45,9 @@ public class playercontrol : MonoBehaviour
         victoryMenu.SetActive(false);
         defeatMenu.SetActive(false);
         Time.timeScale = 1;
-        isHurt = false;
         hit = 0;
         shots1 = 6;
-        shots2 = 3;
-        shots3 = 1;
+        shots2 = 1;
         rb = GetComponent<Rigidbody2D>();
         audioData = GetComponent<AudioSource>();
         speed = 30f;
@@ -97,10 +90,6 @@ public class playercontrol : MonoBehaviour
             anim.SetBool("isMoving", false);
 
         }
-        if (isHurt == true)
-        {
-            catchFire(hit);
-        }
 
         //Lose game when health is 0
         if (hit == 3)
@@ -118,17 +107,17 @@ public class playercontrol : MonoBehaviour
         //Swap weapons with Q and E
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            currentweapon = currentweapon - 2;
+            currentweapon = currentweapon - 1;
             if (currentweapon < 1)
             {
-                currentweapon = 3;
+                currentweapon = 2;
             }
 
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            currentweapon = currentweapon + 2;
-            if (currentweapon > 3)
+            currentweapon = currentweapon + 1;
+            if (currentweapon > 2)
             {
                 currentweapon = 1;
             }
@@ -141,12 +130,9 @@ public class playercontrol : MonoBehaviour
         }
         else if(currentweapon == 2)
         {
-            ammoText.text = "Mortar: " + shots2.ToString();
+            ammoText.text = "Laser: " + shots2.ToString();
         }
-        else if (currentweapon == 3)
-        {
-            ammoText.text = "Laser: " + shots3.ToString();
-        }
+
         //Fire Projectile for weapon if Space is pressed and there is ammo
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -216,7 +202,6 @@ public class playercontrol : MonoBehaviour
         {
             health1.SetActive(true);
             firesound.Stop();
-            isHurt = false;
             FireSmall.gameObject.SetActive(false);
         }
         if (hit == 1)
@@ -227,7 +212,6 @@ public class playercontrol : MonoBehaviour
             firesound.volume = 1f;
             FireSmall.gameObject.SetActive(true);
             FireLarge.gameObject.SetActive(false);
-            isHurt = true;
         }
         if (hit == 2)
         {
@@ -252,8 +236,7 @@ public class playercontrol : MonoBehaviour
         if (col.gameObject.tag == "Ammo")
         {
             shots1 = 6;
-            shots2 = 3;
-            shots3 = 1;
+            shots2 = 1;
             ammotimer = 3;
         }
 
@@ -272,23 +255,13 @@ public class playercontrol : MonoBehaviour
         {
             if (shots2 > 0)
             {
-                Instantiate(mortarblast, transform.position, transform.rotation);
-               // mortar.gameObject.SetActive(true);
-                mortarsound.Play();
-                shots2 = shots2 - 1;
-            }
-        }
-        else if (currentweapon == 3)
-        {
-            if (shots3 > 0)
-            {
 
                 Instantiate(laserblast, new Vector3(transform.position.x - 40, transform.position.y, transform.position.z), transform.rotation);
                 //laser.Play();
                 // laser.enableEmission = true;
                 // laser.Play();
                 lasersound.Play(0);
-                shots3 = shots3 - 1;
+                shots2 = shots2 - 1;
             }
         }
     }
@@ -313,27 +286,6 @@ public class playercontrol : MonoBehaviour
 
     }
 
-    IEnumerator catchFire(int hit)
-   {
-       
-    
-        while (hit > 0)
-        {
-            var SmEm = FireSmall.emission;
-            SmEm.enabled = true;
-            FireSmall.Play();
-
-            while (hit > 1)
-            {
-                FireLarge.Play();
-                while (hit > 2)
-                {
-                    FireDead.Play();
-                }
-            }
-            yield return new WaitForSeconds(0.01f);
-        }
-
-    }
+ 
 
 }

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7564710010862953170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7564710010862953181}
+  - component: {fileID: 2662756843044287445}
+  m_Layer: 0
+  m_Name: LevelTwoSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7564710010862953181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564710010862953170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.220245, y: 7.887356, z: -5.671875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2662756843044287445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564710010862953170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e98fd3eac19ef418715287f0367b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteorOne: {fileID: 5305735270670420412, guid: 0cf34072772473e4bad4178d10a0a9a7,
+    type: 3}
+  meteorTwo: {fileID: 8688541028958077801, guid: 6686b2f9fc730d248ac37840c783bb07,
+    type: 3}
+  meteorThree: {fileID: 3039775809319030696, guid: aff1877baee0b9d4fb47c7bcff93508a,
+    type: 3}
+  enemy: {fileID: 1088389718566071198, guid: 836c23ae24c7c4148af7a6205b294ba2, type: 3}
+  finish: {fileID: 5465282964910264002, guid: daa716e5730e18f45b3c8f5a73d29dba, type: 3}

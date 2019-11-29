@@ -25,6 +25,7 @@ TagManager:
   - ComingSoon
   - LevelSelect
   - DespawnPlayer
+  - Hole
   layers:
   - Default
   - TransparentFX

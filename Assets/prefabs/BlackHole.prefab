@@ -253,7 +253,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4178242428324446618}
   - component: {fileID: 5546541852783499781}
-  - component: {fileID: 1285375130}
   m_Layer: 2
   m_Name: BlackHoleSprite
   m_TagString: Untagged
@@ -325,22 +324,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &1285375130
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3134889054295080346}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ed450161d4cc9f741bff9d0c1dffc1de, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: ed450161d4cc9f741bff9d0c1dffc1de, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &3321892662610556223
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +392,6 @@ GameObject:
   - component: {fileID: 6033282044250670828}
   - component: {fileID: 6033282044250670819}
   - component: {fileID: 6033282044250670818}
-  - component: {fileID: 6033282044250670817}
   - component: {fileID: 8587607109969895156}
   m_Layer: 2
   m_Name: BlackHole
@@ -486,19 +468,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6033282044250670817
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6033282044250670816}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &8587607109969895156
 Animator:
   serializedVersion: 3
@@ -640,7 +609,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8700807093500964725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bba6b643fa7718488e0ffb48cea08f1, type: 3}
   m_Name: 

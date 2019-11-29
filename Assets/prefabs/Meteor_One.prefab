@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4991467370524852614}
   - component: {fileID: 3958515202204587723}
   - component: {fileID: 2179836253732617657}
-  - component: {fileID: 5271109334558338274}
   - component: {fileID: 4497091971235495635}
   m_Layer: 8
   m_Name: Meteor_One
@@ -123,7 +122,7 @@ MonoBehaviour:
   shield: {fileID: 3028744133449411264, guid: 127e8f71eb44ebd459c36cd99cc7a1dd, type: 3}
   health: {fileID: 1807498547355265432, guid: 23c74246466a452439c5a651168e4554, type: 3}
   ammo: {fileID: 7141052326004965316, guid: 554353bb3c2f8df4c9b9456e1832f518, type: 3}
-  anim: {fileID: 5271109334558338274}
+  anim: {fileID: 0}
   explosion: {fileID: 9178649358511529532, guid: d1e4dd871bd1cbf48b04cd707006ac4f,
     type: 3}
   explodesound: {fileID: 4497091971235495635}
@@ -143,25 +142,6 @@ CircleCollider2D:
   m_Offset: {x: 0.000030517578, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!95 &5271109334558338274
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305735270670420412}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6348ec47843f9584db0dc013d74760ec, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &4497091971235495635
 AudioSource:
   m_ObjectHideFlags: 0

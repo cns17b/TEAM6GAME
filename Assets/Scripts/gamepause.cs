@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class gamepause : MonoBehaviour
 {
+    //Assets/Plugins/WebGL/ImageUploader.jslib
 
     //Menus based on code from https://www.sitepoint.com/adding-pause-main-menu-and-game-over-screens-in-unity/
 

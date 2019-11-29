@@ -39,7 +39,6 @@ public class enemyprojectile : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             speed = 0;
-            anim.SetTrigger("Hit");
             end();
 
         }

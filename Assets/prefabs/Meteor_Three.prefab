@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1966146717387193500}
   - component: {fileID: 1966146717387193496}
   - component: {fileID: 7377324779561636302}
-  - component: {fileID: 4949580462235294270}
   - component: {fileID: 921662864419576648}
   m_Layer: 8
   m_Name: Meteor_Three
@@ -124,7 +123,6 @@ MonoBehaviour:
   shield: {fileID: 3028744133449411264, guid: 127e8f71eb44ebd459c36cd99cc7a1dd, type: 3}
   health: {fileID: 1807498547355265432, guid: 23c74246466a452439c5a651168e4554, type: 3}
   ammo: {fileID: 7141052326004965316, guid: 554353bb3c2f8df4c9b9456e1832f518, type: 3}
-  anim: {fileID: 4949580462235294270}
   explosion: {fileID: 9178649358511529532, guid: d1e4dd871bd1cbf48b04cd707006ac4f,
     type: 3}
   explodesound: {fileID: 921662864419576648}
@@ -160,25 +158,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 6, y: 4}
   m_Direction: 1
---- !u!95 &4949580462235294270
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966146717387193501}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e6b291920690c345a5118184a0a59b6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &921662864419576648
 AudioSource:
   m_ObjectHideFlags: 0

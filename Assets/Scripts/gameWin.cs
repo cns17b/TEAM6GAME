@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class gameWin : MonoBehaviour
 {
+    //Assets/Plugins/WebGL/ImageUploader.jslib
     GameObject[] winobjects;
     //GameObject[] UIobjects;
     // Start is called before the first frame update

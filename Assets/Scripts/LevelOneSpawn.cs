@@ -27,7 +27,7 @@ public class LevelOneSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        leveltimer = 95;
+        leveltimer = 185;
         m1timer = 3;
         m1spawn = 0;
         m2timer = 5;
